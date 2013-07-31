@@ -11,6 +11,7 @@ public class Person {
 	private String name;
 	private int age;
 	private long cid;
+	private PClass pClass;
 	
 	public long getId() {
 		return id;
@@ -35,5 +36,11 @@ public class Person {
 	}
 	public void setCid(long cid) {
 		this.cid = cid;
+	}
+	public PClass getpClass() {
+		return pClass;
+	}
+	public void setpClass(PClass pClass) {
+		this.pClass = pClass;
 	}
 }

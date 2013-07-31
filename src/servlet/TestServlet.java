@@ -17,6 +17,7 @@ import org.hibernate.Session;
 import pojo.PNum;
 import pojo.Person;
 
+import dao.PClassDao;
 import dao.PNumDao;
 import dao.PersonDao;
 
@@ -60,7 +61,7 @@ public class TestServlet extends HttpServlet {
 		
 //		new PersonDao().getPersons();
 		
-		new PNumDao().deletePNum();
+		new PClassDao().getClassInfo();
 		
 	}
 

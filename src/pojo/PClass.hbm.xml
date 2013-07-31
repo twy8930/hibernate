@@ -6,5 +6,9 @@
     <class name="PClass" table="pclass">
         <id name="id" column="id"></id>
         <property name = "cname"  column="class_name" />
+        <set name="persons"  inverse="false" cascade="all">    	 
+		      <key column ="class_id" /> 
+		      <one-to-many class="pojo.Person"/>
+	    </set>
     </class>
 </hibernate-mapping>

@@ -116,5 +116,16 @@ public class PersonDao {
 		HibernateSessionFactory.closeSession();
 		return list;
 	}
+	
+	public void getManyToOne(){
+		Session session = HibernateSessionFactory.getSession();
+		Query query = session.createQuery("from Person where id=:id");
+		query.setLong("id", 2l);
+		List<Person> list = query.list();
+		for (Person person : list) {
+			System.out.println(person.getId() + ":" + person.getName()+":"+person.getpClass().getCname());
+		}
+		HibernateSessionFactory.closeSession();
+	}
 
 }

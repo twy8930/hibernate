@@ -10,6 +10,11 @@
         </id>
         <property name = "name"  column="name" />
         <property name = "age" column ="age" />
-        <property name = "cid" column ="class_id" />
+        <!-- <property name = "cid" column ="class_id"/>  -->
+        <many-to-one name="pClass"  		 
+                    column="class_id"  		 
+                    class="pojo.PClass" 	 
+                    cascade="all"  />       
+                    <!-- unique="true" --> 
     </class>
 </hibernate-mapping>
